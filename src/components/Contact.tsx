@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import emailjs from "emailjs-com";
 const Contact = () => {
-
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
@@ -42,10 +41,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section
+      id="contact"
+      className="py-20 bg-white dark:bg-gray-800 transition-colors duration-200"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
-          className="text-4xl font-bold text-center mb-16"
+          className="text-4xl font-bold text-center mb-16 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,24 +61,30 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 dark:text-white">
+              Contact Information
+            </h3>
             {[
               {
                 Icon: Mail,
                 text: "priyankarawma@gmail.com",
                 href: "mailto:priyankarawma@gmail.com",
               },
-              { Icon: Phone, text: "+94 712872832", href: "tel:+94712872832" },
               {
-                Icon: MapPin,
-                text: "145/2, Aththanayala, Medamulana",
-                href: "#",
+                Icon: Github,
+                text: "GitHub/Asith Priyankara",
+                href: "https://github.com/Asith-priyankara",
+              },
+              {
+                Icon: Linkedin,
+                text: "LinkedIn/Asith Priyankara",
+                href: "https://www.linkedin.com/in/asith-priyankara-813446265/",
               },
             ].map(({ Icon, text, href }) => (
               <motion.a
                 key={text}
                 href={href}
-                className="flex items-center space-x-4 text-gray-600 hover:text-gray-900"
+                className="flex items-center space-x-4 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 whileHover={{ x: 10 }}
               >
                 <Icon size={24} />
@@ -90,7 +98,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="from_name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Name
                 </label>
@@ -99,14 +107,14 @@ const Contact = () => {
                   id="from_name"
                   value={formData.from_name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   required
                 />
               </div>
               <div>
                 <label
                   htmlFor="from_email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email
                 </label>
@@ -115,14 +123,14 @@ const Contact = () => {
                   id="from_email"
                   value={formData.from_email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   required
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -131,7 +139,7 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent dark:text-white"
                   required
                 />
               </div>
@@ -140,7 +148,7 @@ const Contact = () => {
                 className={`w-full text-white px-6 py-3 rounded-lg font-medium transition-colors ${
                   isSending
                     ? "bg-gray-500"
-                    : "bg-purple-600 hover:bg-purple-700"
+                    : "bg-purple-600 hover:bg-purple-700 dark:bg-gradient-to-r dark:from-purple-600 dark:to-blue-500 dark:hover:from-purple-500 dark:hover:to-blue-400"
                 }`}
                 whileHover={{ scale: isSending ? 1 : 1.02 }}
                 whileTap={{ scale: isSending ? 1 : 0.98 }}
