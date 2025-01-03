@@ -43,6 +43,12 @@ const Hero = () => {
               className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium inline-flex items-center space-x-2 hover:bg-purple-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+            onClick={() => {
+                const section = document.getElementById('projects');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               View My Work
               <ArrowDown className="ml-2" size={20} />

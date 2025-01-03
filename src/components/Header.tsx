@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -11,30 +12,35 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <motion.h1 
+          <motion.h1
             className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
             Portfolio
           </motion.h1>
           <nav className="hidden md:flex space-x-8">
-            {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
-              <motion.a
+            {["About", "Projects", "Skills", "Contact"].map((item) => (
+              <motion.div
                 key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {item}
-              </motion.a>
+                <Link
+                  to={item.toLowerCase()}
+                  smooth={true}
+                  duration={1000}
+                  className="text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+                >
+                  {item}
+                </Link>
+              </motion.div>
             ))}
           </nav>
           <div className="flex space-x-4">
             {[
               { Icon: Github, href: "https://github.com" },
               { Icon: Linkedin, href: "https://linkedin.com" },
-              { Icon: Mail, href: "mailto:your.email@example.com" }
+              { Icon: Mail, href: "mailto:your.email@example.com" },
             ].map(({ Icon, href }) => (
               <motion.a
                 key={href}
