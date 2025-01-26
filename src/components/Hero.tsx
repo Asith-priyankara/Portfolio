@@ -41,9 +41,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Specialized in creating modern web applications with React, Spring
-              Boot, and cloud technologies. Let's build something amazing
-              together.
+              I am an undergraduate student at the University of Moratuwa, passionate about computer science
+              I enjoy exploring various aspects of the field, including programming, software development, and problem-solving. My curiosity drives me to continually learn and apply new concepts, aiming to contribute to innovative solutions and improve technology.
             </motion.p>
 
             <motion.div
@@ -52,20 +51,6 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              {/* <motion.button
-                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium shadow-lg shadow-purple-200 dark:shadow-purple-900/20 hover:shadow-xl hover:scale-105 transition-all"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                View Projects
-              </motion.button>
-              <motion.button
-                className="px-8 py-3 border-2 border-purple-200 dark:border-purple-700 text-purple-600 dark:text-purple-400 rounded-lg font-medium hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Contact Me
-              </motion.button> */}
             </motion.div>
 
             <SocialLinks />

@@ -78,7 +78,7 @@ const Projects = () => {
                   {project.description}
                 </p>
                 <div className="flex space-x-4 justify-between">
-                  <motion.a
+                  {/* <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Projects = () => {
                   >
                     <ExternalLink size={20} className="mr-2" />
                     Live Demo
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </div>
             </motion.div>

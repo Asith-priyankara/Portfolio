@@ -7,9 +7,12 @@ const experiences = [
     company: "DFN Technology Pvt Ltd",
     period: "2023 Dec - 2024 June",
     description: [
-      "Built RESTful APIs using Node.js and Express",
-      "Developed responsive front-end using React",
-      "Managed MySQL databases and implemented data migration",
+
+"Developed front-end components using Angular and conducted unit testing with Jasmine.",
+"Built back-end services using Java and Spring Framework, ensuring system performance and scalability.",
+"Managed database operations with Oracle Database, optimizing data access and storage.",
+"Contributed to the implementation of new features, enhancing functionality and user experience.",
+"Resolved critical bugs, improving system stability and maintainability."
     ],
     technologies: ["Angular", "Java", "Springboot", "Oracle"],
   },

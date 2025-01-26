@@ -43,7 +43,7 @@ const Header = () => {
             <ThemeToggle />
 
             <DownloadButton
-              href="https://drive.google.com/uc?id=1WJU5O0Ap57GDFEsTFzg19JeffbRsWiIQ&export=download"
+              href="https://drive.google.com/file/d/1cZ_8ZDZouz6On945SRbWudauoLqycUy9/view?usp=sharing"
               variant="secondary"
               icon
             >
