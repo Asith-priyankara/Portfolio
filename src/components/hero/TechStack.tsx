@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 const technologies = [
   { name: "Angular", image: "/images/Angular.svg" },
-  { name: "React", image: "/images/React.png" },
+  { name: "React", image: "/images/react.svg" },
   { name: "Next.js", image: "/images/Nextjs.svg" },
   { name: "Spring Boot", image: "/images/Spring.svg" },
-  { name: "Node.js", image: "/images/Nodejs.svg" },
+  { name: "Node.js", image: "/images/nodejs.svg" },
   { name: "MySQL", image: "/images/MySQL.svg" },
   { name: "Oracle", image: "/images/Oracle.svg" },
   { name: "PostgreSQL", image: "/images/PostgresSQL.svg" },
