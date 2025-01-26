@@ -17,7 +17,7 @@ const skillCategories = [
     icon: Globe,
     skills: [
       { name: "Angular", imgSrc: "/images/Angular.svg" },
-      { name: "React", imgSrc: "/images/React.svg" },
+      { name: "React", imgSrc: "/images/react.svg" },
       { name: "Next.js", imgSrc: "/images/Nextjs.svg" },
     ],
   },
@@ -26,7 +26,7 @@ const skillCategories = [
     icon: Server,
     skills: [
       { name: "Spring Boot", imgSrc: "/images/Spring.svg" },
-      { name: "Node.js", imgSrc: "/images/Nodejs.svg" },
+      { name: "Node.js", imgSrc: "/images/nodejs.svg" },
     ],
   },
   {
